@@ -26,6 +26,7 @@ class _CustomTextfieldState extends State<CustomTextfield> {
         if (value == null || value.isEmpty) {
           return 'Enter your ${widget.hintText}';
         }
+        return null;
       },
     );
   }
