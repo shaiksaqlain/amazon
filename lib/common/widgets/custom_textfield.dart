@@ -23,7 +23,9 @@ class _CustomTextfieldState extends State<CustomTextfield> {
           enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black38))),
       validator: (value) {
-        return null;
+        if (value == null || value.isEmpty) {
+          return 'Enter your ${widget.hintText}';
+        }
       },
     );
   }
