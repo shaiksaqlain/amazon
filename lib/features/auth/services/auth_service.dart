@@ -2,10 +2,10 @@
 
 import 'dart:convert';
 
+import 'package:amazon/common/widgets/bottom_bar.dart';
 import 'package:amazon/constants/error_handling.dart';
 import 'package:amazon/constants/global_variables.dart';
 import 'package:amazon/constants/utils.dart';
-import 'package:amazon/features/auth/screens/home_screen.dart';
 import 'package:amazon/models/user.dart';
 import 'package:amazon/providers/user_provider.dart';
 
@@ -76,10 +76,10 @@ class AuthService {
           SharedPreferences prefs = await SharedPreferences.getInstance();
 
           Provider.of<UserProvider>(context, listen: false).setUser(res.body);
+          showSnackbar(context, "Login Success");
           await prefs.setString('x-auth-token', jsonDecode(res.body)['token']);
           Navigator.pushNamedAndRemoveUntil(
-              context, HomeScreen.routeName, (route) => false);
-          showSnackbar(context, "Login Success");
+              context, BottomBar.routeName, (route) => false);
         },
       );
     } catch (e) {
@@ -117,8 +117,9 @@ class AuthService {
           },
         );
 
-        var userprovider = Provider.of<UserProvider>(context, listen: false)
-            .setUser(userRes.body);
+        var userprovider = Provider.of<UserProvider>(context, listen: false);
+
+        userprovider.setUser(userRes.body);
       }
     } catch (e) {
       showSnackbar(context, e.toString());

@@ -1,6 +1,8 @@
+// ignore_for_file: depend_on_referenced_packages
+
+import 'package:amazon/common/widgets/bottom_bar.dart';
 import 'package:amazon/constants/global_variables.dart';
 import 'package:amazon/features/auth/screens/auth_screen.dart';
-import 'package:amazon/features/auth/screens/home_screen.dart';
 import 'package:amazon/features/auth/services/auth_service.dart';
 import 'package:amazon/providers/user_provider.dart';
 import 'package:amazon/router.dart';
@@ -23,6 +25,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final AuthService authService = AuthService();
   @override
+  
   void initState() {
     super.initState();
     authService.getUserData(context);
@@ -45,7 +48,7 @@ class _MyAppState extends State<MyApp> {
       ),
       onGenerateRoute: (settings) => generateRoutes(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ? const HomeScreen()
+          ? const BottomBar()
           : const AuthScreen(),
     );
   }
