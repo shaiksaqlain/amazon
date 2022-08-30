@@ -1,4 +1,7 @@
 import 'package:amazon/constants/global_variables.dart';
+import 'package:amazon/features/auth/widgets/below_app_bar.dart';
+import 'package:amazon/features/auth/widgets/orders.dart';
+import 'package:amazon/features/auth/widgets/top_buttons.dart';
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -58,11 +61,16 @@ class _AccountScreenState extends State<AccountScreen> {
         ),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          // Text("Hey"),
-          // Text("Hey"),
-          // Text("Hey"),
+        children: const [
+          BelowAppBar(),
+          SizedBox(
+            height: 10,
+          ),
+          TopButtons(),
+          SizedBox(
+            height: 20,
+          ),
+          Orders(),
         ],
       ),
     );
