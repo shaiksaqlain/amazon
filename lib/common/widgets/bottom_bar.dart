@@ -1,8 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/features/auth/screens/account_screen.dart';
-import 'package:amazon/features/auth/screens/home_screen.dart';
+import 'package:amazon/features/screens/account_screen.dart';
+import 'package:amazon/features/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 
@@ -42,7 +42,7 @@ class _BottomBarState extends State<BottomBar> {
         unselectedItemColor: GlobalVariables.unselectedNavBarColor,
         backgroundColor: GlobalVariables.backgroundColor,
         iconSize: 28,
-        onTap:updatePage,
+        onTap: updatePage,
         selectedItemColor: GlobalVariables.selectedNavBarColor,
         items: [
           BottomNavigationBarItem(

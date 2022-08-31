@@ -1,10 +1,10 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/features/auth/widgets/address_box.dart';
-import 'package:amazon/features/auth/widgets/carousal_image.dart';
-import 'package:amazon/features/auth/widgets/deal_of_the_day.dart';
-import 'package:amazon/features/auth/widgets/top_categories.dart';
+import 'package:amazon/features/widgets/address_box.dart';
+import 'package:amazon/features/widgets/carousal_image.dart';
+import 'package:amazon/features/widgets/deal_of_the_day.dart';
+import 'package:amazon/features/widgets/top_categories.dart';
 import 'package:amazon/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -86,22 +86,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      body: Column(
-        children: const [
-          AddressBox(),
-          SizedBox(
-            height: 10,
-          ),
-          TopCategories(),
-           SizedBox(
-            height: 10,
-          ),
-          CarousalImage(),
-           SizedBox(
-            height: 10,
-          ),
-          DealOfTheDay()
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            AddressBox(),
+            SizedBox(
+              height: 10,
+            ),
+            TopCategories(),
+            SizedBox(
+              height: 10,
+            ),
+            CarousalImage(),
+            SizedBox(
+              height: 10,
+            ),
+            DealOfTheDay()
+          ],
+        ),
       ),
     );
   }

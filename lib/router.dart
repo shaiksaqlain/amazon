@@ -1,6 +1,6 @@
 import 'package:amazon/common/widgets/bottom_bar.dart';
-import 'package:amazon/features/auth/screens/auth_screen.dart';
-import 'package:amazon/features/auth/screens/home_screen.dart';
+import 'package:amazon/features/screens/auth_screen.dart';
+import 'package:amazon/features/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoutes(RouteSettings routeSettings) {

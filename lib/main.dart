@@ -2,8 +2,8 @@
 
 import 'package:amazon/common/widgets/bottom_bar.dart';
 import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/features/auth/screens/auth_screen.dart';
-import 'package:amazon/features/auth/services/auth_service.dart';
+import 'package:amazon/features/screens/auth_screen.dart';
+import 'package:amazon/features/services/auth_service.dart';
 import 'package:amazon/providers/user_provider.dart';
 import 'package:amazon/router.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final AuthService authService = AuthService();
   @override
-  
   void initState() {
     super.initState();
     authService.getUserData(context);

@@ -1,5 +1,5 @@
 import 'package:amazon/constants/global_variables.dart';
-import 'package:amazon/features/auth/widgets/single_product.dart';
+import 'package:amazon/features/widgets/single_product.dart';
 import 'package:flutter/material.dart';
 
 class Orders extends StatefulWidget {
