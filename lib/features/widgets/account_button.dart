@@ -28,7 +28,7 @@ class _AccountButtonState extends State<AccountButton> {
             color: Colors.white),
         child: OutlinedButton(
           style: ElevatedButton.styleFrom(
-              primary: Colors.black12.withOpacity(0.03),
+              backgroundColor: Colors.black12.withOpacity(0.03),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50),
               )),

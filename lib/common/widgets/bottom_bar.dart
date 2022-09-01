@@ -30,6 +30,7 @@ class _BottomBarState extends State<BottomBar> {
   updatePage(int pagepara) {
     setState(() {
       page = pagepara;
+      print(page);
     });
   }
 
