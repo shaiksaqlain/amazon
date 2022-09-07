@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const authRouter = require("../routes/auth");
+//const authRouter = require("../routes/auth");
 const userSchema = mongoose.Schema({
   name: {
     required: true,

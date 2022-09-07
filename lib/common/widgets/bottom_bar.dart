@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: depend_on_referenced_packages, avoid_print
 
 import 'package:amazon/constants/global_variables.dart';
 import 'package:amazon/features/screens/account_screen.dart';

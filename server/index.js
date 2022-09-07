@@ -4,6 +4,7 @@ console.log("hello, world");
 const express = require("express");
 
 const mongoose = require("mongoose");
+const adminRouter = require("./routes/admin");
 
 // init
 const PORT = 3000;
@@ -12,9 +13,11 @@ const db="mongodb+srv://lucifer:9440689760@cluster0.dlcy84u.mongodb.net/?retryWr
 
 //import from other files
 const authRouter = require("./routes/auth");
+
 //middleware
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter)
 
 //connections
 mongoose
